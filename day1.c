@@ -66,61 +66,20 @@ int value(int* total) {
 	}
 	//printf("total num: %s\n", num);
 	int tnum = 0;
-	if (num[0] == '1') {
-		tnum += 10;
+	char c;
+	for (i = 0; i <= 9; i++) {
+		c = i + '0';
+		if (num[0] == c) {
+			tnum += i * 10;
+		}
 	}
-	else if (num[0] == '2') {
-		tnum += 20;
-	}
-	else if (num[0] == '3') {
-		tnum += 30;
-	}
-	else if (num[0] == '4') {
-		tnum += 40;
-	}
-	else if (num[0] == '5') {
-		tnum += 50;
-	}
-	else if (num[0] == '6') {
-		tnum += 60;
-	}
-	else if (num[0] =='7') {
-		tnum += 70;
-	}
-	else if (num[0] == '8') {
-		tnum += 80;
-	}
-	else if (num[0] == '9') {
-		tnum += 90;
+	for (i = 0; i <= 9; i++) {
+		c = i + '0';
+		if (num[1] == c) {
+			tnum += i;
+		}
 	}
 
-	if (num[1] == '1') {
-		tnum += 1;
-	}
-	else if (num[1] == '2') {
-		tnum += 2;
-	}
-	else if (num[1] == '3') {
-		tnum += 3;
-	}
-	else if (num[1] == '4') {
-		tnum += 4;
-	}
-	else if (num[1] == '5') {
-		tnum += 5;
-	}
-	else if (num[1] == '6') {
-		tnum += 6;
-	}
-	else if (num[1] == '7') {
-		tnum += 7;
-	}
-	else if (num[1] == '8') {
-		tnum += 8;
-	}
-	else if (num[1] == '9') {
-		tnum += 9;
-	}
 	printf("two num = %d\n", tnum);
 	*total += tnum;
 	return 0;
