@@ -2,20 +2,18 @@ import time
 import re
 
 def real(arg, num):
-	bool possible = False;
+	possible = False
 	#print("real called")
-	if arg
+	if arg:
+		possible = True
 	return num
-
-
-
 
 #opens file input
 file1 = open('input.txt', 'r')
 
 #gets line one at a time
-total = 0;
-count = 1
+total = 0
+count = 0
 
 while True:
 	line = file1.readline()
@@ -25,7 +23,7 @@ while True:
 	total += real(line, count)
 	count += 1
 
-print("{}".format(total))
+print("{}".format(count))
 
 print("end of program")
 #pauses for 10s to see ouput
