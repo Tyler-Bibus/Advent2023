@@ -7,7 +7,10 @@ def real(arg):
 
 	#stores colors in a list
 	colors = []
-
+	lred = 0
+	lblue = 0
+	lgreen = 0
+	ltotal = 0
 	#finds all the numbers
 	nums = re.findall(r'\d+', arg)
 	numlist = list(map(int, nums))
@@ -24,17 +27,19 @@ def real(arg):
 	i = 0
 	print("checking...")
 	for i in range(checks):
-		if colors[i] == 'red' and numlist[i+1] > 12:
-			print("not possible")
-			return 0
-		if colors[i] == 'green' and numlist[i+1] > 13:
-			print("not possible")
-			return 0
-		if colors[i] == 'blue' and numlist[i+1] > 14:
-			print("not possible")
-			return 0
+		if colors[i] == 'red' and numlist[i+1] > lred:
+			lred = numlist[i+1]
+			print("red increased in size")
+		if colors[i] == 'green' and numlist[i+1] > lgreen:
+			lgreen = numlist[i+1]
+			print("green increase")
+		if colors[i] == 'blue' and numlist[i+1] > lblue:
+			lblue = numlist[i+1]
+			print("blue increase")
 
-	return numlist[0]
+	ltotal = lblue * lgreen * lred
+	print("ltotal is: " + str(ltotal))
+	return ltotal
 
 #opens file input
 file1 = open('inputFin.txt', 'r')
