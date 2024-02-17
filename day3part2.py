@@ -85,7 +85,7 @@ def getnum(numlist, row, col):
 #function checks if number should be included and adds to total
 def check(numlist):
 	print("checking all nums")
-	length = 141
+	length = 141 #hardcoding nums is bad oops
 	row = 0
 	count = 0
 	allNum = 0
